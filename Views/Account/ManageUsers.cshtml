@@ -1,0 +1,42 @@
+@model List<GitGenius.Models.PendingUserViewModel>
+
+    <h2 class="text-center mb-4 text-primary">Managing Pending Users</h2>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-light text-center">
+            <tr>
+                <th>Full name</th>
+                <th>Email</th>
+                <th>ID</th>
+                <th>Role</th>
+                <th>Student file</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-center align-middle">
+            @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.IdNumber</td>
+                <td>@user.Role</td>
+                <td>
+                    <a href="@Url.Content($"~/@user.ApprovalFilePath")" target="_blank" class="btn btn-link text-decoration-none">Show file</a>
+                </td>
+                <td>
+                    <div class="d-flex justify-content-center gap-2">
+                        <form asp-action="ApproveUser" method="post">
+                            <input type="hidden" name="id" value="@user.Id" />
+                            <button type="submit" class="btn btn-success btn-sm">Accept</button>
+                        </form>
+                        <form asp-action="RejectUser" method="post">
+                            <input type="hidden" name="id" value="@user.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>

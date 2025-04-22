@@ -1,0 +1,34 @@
+@model List<GitGenius.Models.User>
+
+<h2>Users awaiting approval</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.Role</td>
+                <td>
+                    <form asp-action="Approve" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@user.Id" />
+                        <button class="btn btn-success btn-sm">Accept</button>
+                    </form>
+                    <form asp-action="Reject" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@user.Id" />
+                        <button class="btn btn-danger btn-sm">Reject</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

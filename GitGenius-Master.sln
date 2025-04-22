@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitGenius-Master", "GitGenius-Master.csproj", "{79399EC4-6E6A-CB80-9E00-42E72873E4F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79399EC4-6E6A-CB80-9E00-42E72873E4F0}.Debug|x86.ActiveCfg = Debug|x86
+		{79399EC4-6E6A-CB80-9E00-42E72873E4F0}.Debug|x86.Build.0 = Debug|x86
+		{79399EC4-6E6A-CB80-9E00-42E72873E4F0}.Release|x86.ActiveCfg = Release|x86
+		{79399EC4-6E6A-CB80-9E00-42E72873E4F0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A900CCB0-7518-40EA-8B6E-F5FB914B5FE5}
+	EndGlobalSection
+EndGlobal
